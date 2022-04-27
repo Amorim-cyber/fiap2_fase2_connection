@@ -1,6 +1,7 @@
 package br.com.fiap.showMeCurriculum.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="tbl_candidato")
@@ -30,6 +31,11 @@ public class Candidato {
 
     @Column(name="dt_nasc",nullable=false,length=8)
     private String dtNasc;
+
+    @ManyToMany(cascade=CascadeType.PERSIST)
+    @JoinTable(joinColumns = @JoinColumn(name="id_candidato"),
+            inverseJoinColumns = @JoinColumn(name="id_skill"), name = "tbl_skill_aux")
+    private List<Skill> skills;
 
     public Candidato(){}
 
