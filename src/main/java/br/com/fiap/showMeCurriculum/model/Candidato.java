@@ -37,6 +37,10 @@ public class Candidato {
             inverseJoinColumns = @JoinColumn(name="id_skill"), name = "tbl_skill_aux")
     private List<Skill> skills;
 
+    @JoinColumn(name = "id_certificacao")
+    @OneToMany(cascade=CascadeType.PERSIST)
+    private List<Certificacao> certificados;
+
     public Candidato(){}
 
     public int getIdCandidato() {
