@@ -18,6 +18,10 @@ public class Certificacao {
     @Column(name="dt_conclusao",nullable=false,length=8)
     private String dtConclusao;
 
+    @JoinColumn(name = "id_tipo_cert")
+    @ManyToOne(cascade=CascadeType.PERSIST)
+    private TipoDeCertificado tipo;
+
     public Certificacao() {
     }
 
@@ -43,5 +47,13 @@ public class Certificacao {
 
     public void setDtConclusao(String dtConclusao) {
         this.dtConclusao = dtConclusao;
+    }
+
+    public TipoDeCertificado getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoDeCertificado tipo) {
+        this.tipo = tipo;
     }
 }

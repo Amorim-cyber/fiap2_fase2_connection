@@ -98,4 +98,20 @@ public class Candidato {
     public void setDtNasc(String dtNasc) {
         this.dtNasc = dtNasc;
     }
+
+    public List<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
+    }
+
+    public List<Certificacao> getCertificados() {
+        return certificados;
+    }
+
+    public void setCertificados(List<Certificacao> certificados) {
+        this.certificados = certificados;
+    }
 }
