@@ -6,5 +6,5 @@ public abstract class MessageUtils {
 
     public static final String CANDIDATO_ALREADY_EXISTS = "Candidato already exists in the database";
 
-
+    public static final String SKILL_ALREADY_EXISTS = "Skill already exists in the database";
 }
