@@ -13,7 +13,7 @@ public class Certificacao {
     private int idCertificacao;
 
     @Column(name="cd_certificacao",nullable=false,length=100)
-    private String cdCandidato;
+    private String cdCertificacao;
 
     @Column(name="dt_conclusao",nullable=false,length=8)
     private String dtConclusao;
@@ -33,12 +33,12 @@ public class Certificacao {
         this.idCertificacao = idCertificacao;
     }
 
-    public String getCdCandidato() {
-        return cdCandidato;
+    public String getCdCertificacao() {
+        return cdCertificacao;
     }
 
-    public void setCdCandidato(String cdCandidato) {
-        this.cdCandidato = cdCandidato;
+    public void setCdCandidato(String cdCertificacao) {
+        this.cdCertificacao = cdCertificacao;
     }
 
     public String getDtConclusao() {
